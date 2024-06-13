@@ -57,7 +57,7 @@ header div {
 
     background: transparent;
 }
-header a {
+header div a {
     padding: .5rem;
     margin: 0 0 0 4rem;
 
@@ -66,16 +66,16 @@ header a {
 
     background: transparent;
 }
-header nav {
+header div nav {
     background: transparent;
 }
-header nav a {
+header div nav a {
     margin: 0 1rem;
 
     font-size: 20px;
     font-weight: 500;
 }
-header nav a:hover {
+header div nav a:hover {
     color: rgba(255, 255, 255, .4);
 }
 
@@ -414,7 +414,7 @@ footer div a:hover {
     }
 }
 @media screen and (max-width: 1023px) {
-    header {
+    header div {
         width: 100%;
     }
 
@@ -446,16 +446,16 @@ footer div a:hover {
     }
 }
 @media screen and (max-width: 670px) {
-    header {
+    header div {
         justify-content: center;
     }
-    header a {
+    header div a {
         display: none;
     }
-    header nav {
+    header div nav {
         display: flex;
     }
-    header nav a {
+    header div nav a {
         display: block;
     }
 
