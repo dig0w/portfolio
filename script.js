@@ -1,3 +1,4 @@
+// Image back to front
 function focusImage(elem, clss) {
     elem.classList.add(clss);
 
@@ -17,6 +18,7 @@ function focusImage(elem, clss) {
     }, 500);
 };
 
+// Images Slide Show
 function showSlides(n, i) {
     let slideIndex;
 
