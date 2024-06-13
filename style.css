@@ -32,24 +32,30 @@ hr {
     background: rgba(60, 62, 68, 1);
     border: none;
 }
-
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 2rem 0;
+    margin: 0 auto;
+
+    width: 100%;
 
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
 
-    padding: 2rem 0;
+    background: linear-gradient(180deg, rgba(30, 31, 34, 1) 0%, rgba(30, 31, 34, 0) 100%);
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     margin: 0 auto;
 
     width: 84%;
     max-width: 100rem;
 
-    background: linear-gradient(180deg, rgba(30, 31, 34, 1) 0%, rgba(30, 31, 34, 0) 100%);
+    background: transparent;
 }
 header a {
     padding: .5rem;
