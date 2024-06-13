@@ -279,6 +279,8 @@ main .work article .image img.focusLeft {
 
     transition: top 0.5s ease, left 0.5s ease, z-index 0s, transform 0.5s ease;
     transition-delay: 0s, 0s, 0.5s, 0.5s;
+
+    cursor: default;
 }
 main .work article .image img.focusRight {
     top: -23rem;
@@ -289,6 +291,8 @@ main .work article .image img.focusRight {
 
     transition: top 0.5s ease, left 0.5s ease, z-index 0s, transform 0.5s ease;
     transition-delay: 0s, 0s, 0.5s, 0.5s;
+
+    cursor: default;
 }
 main .work article.inverted .image img {
     top: 0;
@@ -340,6 +344,7 @@ main .work article .slideshow .prev, main .work article .slideshow .next {
     color: rgba(255, 255, 255, 1);
     font-weight: bold;
     font-size: 18px;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, .75);
 
     border-radius: 0 3px 3px 0;
     background: transparent;
@@ -411,6 +416,7 @@ footer div a:hover {
         width: 80%;
     }
     main .hero {
+        flex-direction: column-reverse;
         gap: 0;
         justify-content: center;
     }
@@ -422,7 +428,7 @@ footer div a:hover {
         grid-template-rows: 1fr;
     }
     main .hero .image {
-        display: none;
+        width: 35%;
     }
 
     main .work article .text {
