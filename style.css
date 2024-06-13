@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    appearance: none;
+    text-decoration: none;
+
+    background: rgba(30, 31, 34, 1);
+    color: rgba(255, 255, 255, 1);
+
+    font-family: "Ubuntu", sans-serif;
+
+    transition: color .15s ease-in-out, background .15s ease-in-out;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    min-height: 100vh;
+}
+
+hr {
+    width: 90%;
+    height: 1px;
+
+    background: rgba(60, 62, 68, 1);
+    border: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+
+    padding: 2rem 0;
+    margin: 0 auto;
+
+    width: 84%;
+    max-width: 100rem;
+
+    background: linear-gradient(180deg, rgba(30, 31, 34, 1) 0%, rgba(30, 31, 34, 0) 100%);
+}
+header a {
+    padding: .5rem;
+    margin: 0 0 0 4rem;
+
+    font-size: 32px;
+    font-weight: 600;
+
+    background: transparent;
+}
+header nav {
+    background: transparent;
+}
+header nav a {
+    margin: 0 1rem;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+header nav a:hover {
+    color: rgba(255, 255, 255, .4);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+
+    margin: 10.3rem auto 0;
+
+    width: 65%;
+    max-width: 77rem;
+}
+
+main .hero {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+
+    width: 100%;
+}
+main .hero .text {
+    max-width: 38rem;
+}
+main .hero .text h1 {
+    margin: 2rem 0;
+
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 53px;
+}
+main .hero .text h1 span:first-child {
+    color: rgba(249, 230, 144, 1);
+}
+main .hero .text h1 span:last-child {
+    color: rgba(170, 143, 250, 1);
+}
+main .hero .text div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: space-evenly;
+
+    margin: 0 0 0 1rem;
+}
+main .hero .text div p {
+    color: rgba(255, 255, 255, .7);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 27px;
+}
+main .hero .image {
+    position: relative;
+
+    width: 136%;
+    max-width: 500px;
+
+    aspect-ratio: 1/1;
+}
+main .hero .image img {
+    position: absolute;
+    z-index: 3;
+    top: -3vw;
+    left: -2vw;
+
+    width: 27vw;
+    max-width: 500px;
+
+    background: transparent;
+}
+main .hero .image svg {
+    position: absolute;
+    z-index: 2;
+    top: -8vw;
+    left: -8vw;
+
+    width: 40vw;
+    max-width: 750px;
+    height: auto;
+
+    background: transparent;
+    filter: drop-shadow(10px 10px 0 rgba(0, 0, 0, .75));
+
+    fill: rgb(170, 143, 250, .6);
+}
+main .hero .image svg:last-child {
+    z-index: 1;
+    top: -7vw;
+    left: -7vw;
+
+    filter: drop-shadow(10px 10px 0 rgba(255, 255, 255, .75));
+
+    fill: rgba(249, 230, 144, .6);
+}
+
+main article {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin: auto;
+
+    width: 80%;
+    max-width: 80%;
+}
+main article h1 {
+    margin: 0 0 0 1rem;
+
+    font-size: 38px;
+    font-weight: 600;
+}
+main article p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 27px;
+}
+main article p a {
+    color: rgba(170, 143, 250, 1);
+    text-decoration: underline;
+}
+
+main .work article {
+    margin: auto auto 15rem auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+main .work article:last-child {
+    margin: auto;
+}
+main .work article.inverted {
+    flex-direction: row-reverse;
+}
+main .work article .text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+main .work article .text button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: fit-content;
+
+    padding: .9rem 3rem;
+    margin: 0 0 0 1rem;
+
+    outline: none;
+    border: none;
+    background: rgba(170, 143, 250, 1);
+    border-radius: 2rem;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+main .work article .text button:hover {
+    background: rgba(170, 143, 250, .4);
+}
+main .work article .text button svg {
+    width: 16px;
+    height: auto;
+
+    background: transparent;
+
+    fill: rgba(255, 255, 255, 1);
+}
+main .work article .image {
+    position: relative;
+
+    min-width: 61%;
+    min-height: 337.5px;
+}
+main .work article .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 2rem;
+    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .75);
+
+    cursor: pointer;
+    transition: z-index .15s ease-in-out;
+}
+main .work article .image img:first-child {
+    z-index: 1;
+}
+main .work article .image img:last-child {
+    z-index: 2;
+    top: 4rem;
+    left: 4rem;
+}
+main .work article .image img.focusLeft {
+    top: -19rem;
+    left: -19rem;
+    z-index: 3;
+
+    transform: translate(19rem, 19rem);
+
+    transition: top 0.5s ease, left 0.5s ease, z-index 0s, transform 0.5s ease;
+    transition-delay: 0s, 0s, 0.5s, 0.5s;
+}
+main .work article .image img.focusRight {
+    top: -23rem;
+    left: 23rem;
+    z-index: 3;
+
+    transform: translate(-19rem, 27rem);
+
+    transition: top 0.5s ease, left 0.5s ease, z-index 0s, transform 0.5s ease;
+    transition-delay: 0s, 0s, 0.5s, 0.5s;
+}
+main .work article.inverted .image img {
+    top: 0;
+    left: -4rem;
+}
+main .work article.inverted .image img:last-child {
+    z-index: 2;
+    top: 4rem;
+    left: 0;
+}
+main .work article.inverted .image img.focusLeft {
+    top: -19rem;
+    left: -23rem;
+
+    transform: translate(19rem, 19rem);
+}
+main .work article.inverted .image img.focusRight {
+    top: -23rem;
+    left: 23rem;
+
+    transform: translate(-23rem, 27rem);
+}
+main .work article .slideshow {
+    display: none;
+
+    position: relative;
+
+    min-width: 61%;
+}
+main .work article .slideshow img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 2rem;
+
+    cursor: pointer;
+    transition: z-index .15s ease-in-out;
+}
+main .work article .slideshow .prev, main .work article .slideshow .next {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: auto;
+
+    padding: 16px;
+    margin-top: -22px;
+
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+    font-size: 18px;
+
+    border-radius: 0 3px 3px 0;
+    background: transparent;
+
+    transition: 0.6s ease;
+
+    user-select: none;
+    cursor: pointer;
+}
+main .work article .slideshow .next {
+    left: unset;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+main .work article .slideshow .prev:hover, main .work article .slideshow .next:hover {
+    color: rgba(255, 255, 255, .4);
+}
+
+footer {
+    padding: 3rem 0;
+    margin: 10rem 0 0 0;
+
+    background: rgba(15, 16, 17, 1);
+
+    font-size: 18px;
+    font-weight: 300;
+}
+footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+
+    width: 61%;
+    max-width: 72rem;
+
+    background: transparent;
+}
+footer div span, footer div a {
+    background: transparent;
+}
+footer div a:hover {
+    color: rgba(255, 255, 255, .4);
+}
+
+@media screen and (max-width: 1440px) {
+    main .hero .text div {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    main .work article, main .work article.inverted {
+        flex-direction: column;
+    }
+    main .work article .image {
+        display: none;
+    }
+    main .work article .slideshow {
+        display: block;
+    }
+}
+@media screen and (max-width: 1023px) {
+    header {
+        width: 100%;
+    }
+
+    main {
+        width: 80%;
+    }
+    main .hero {
+        gap: 0;
+        justify-content: center;
+    }
+    main .hero .text h1, main article h1, main article p {
+        text-align: center;
+    }
+    main .hero .text div {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+    main .hero .image {
+        display: none;
+    }
+
+    main .work article .text {
+        align-items: center;
+    }
+
+    footer div {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 670px) {
+    header {
+        justify-content: center;
+    }
+    header a {
+        display: none;
+    }
+    header nav {
+        display: flex;
+    }
+    header nav a {
+        display: block;
+    }
+
+    main .hero .text div {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    main .work article .image {
+        min-width: 100%;
+    }
+
+    footer {
+        padding: 2rem 0 1rem;
+    }
+    footer div {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

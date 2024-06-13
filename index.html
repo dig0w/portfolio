@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>dig0w</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="./script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="">dig0w</a>
+
+            <nav>
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="text">
+                    <h1>Hi, my name is <span>Rodrigo Neto</span>,<br> a.k.a <span>dig0w</span>.</h1>
+                    <div>
+                        <p>• 18 years old</p>
+                        <p>• Portuguese</p>
+                        <p>• Computer Science</p>
+                    </div>
+                </div>
+
+                <div class="image">
+                    <img src="./assets/dig0w_logo.png" alt="dig0w logo" draggable="false">
+
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M38.7,-45.7C46.2,-31.2,45.6,-15.6,49.6,3.9C53.5,23.5,62,47,54.5,63C47,79.1,23.5,87.8,7.9,79.8C-7.6,71.9,-15.3,47.4,-27.9,31.4C-40.6,15.3,-58.2,7.6,-64.3,-6.1C-70.3,-19.8,-64.8,-39.5,-52.2,-54.1C-39.5,-68.6,-19.8,-77.9,-2.1,-75.8C15.6,-73.7,31.2,-60.2,38.7,-45.7Z" transform="translate(100 100)" />
+                    </svg>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M51,-41.6C66.9,-35.2,81.1,-17.6,77.1,-4C73,9.5,50.8,19,34.9,29.1C19,39.3,9.5,50,-2.4,52.4C-14.3,54.9,-28.7,48.9,-44.8,38.8C-60.8,28.7,-78.6,14.3,-82.6,-4C-86.7,-22.4,-76.9,-44.8,-60.9,-51.2C-44.8,-57.7,-22.4,-48.1,-2.4,-45.7C17.6,-43.3,35.2,-48,51,-41.6Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+            </section>
+            <hr id="work">
+            <section class="work">
+                <article>
+                    <div class="text">
+                        <h1>Chat Bot</h1>
+                        <p>This was my first project: a Discord chat bot. After watching some tutorials, I decided JavaScript was the way to go. The objective of this bot was to play music in Discord voice channels, and it now supports music from YouTube, Spotify, and SoundCloud. Through this project, I learned about Node.js, APIs, and databases, specifically MongoDB.</p>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/work_chatbot_1.png" alt="The Discord chat bot" draggable="false">
+                        <img src="" alt="" draggable="false">
+                    </div>
+                    <div class="slideshow">
+                        <img src="./assets/work_chatbot_1.png" alt="The Discord chat bot" draggable="false">
+                    </div>
+                </article>
+
+                <article class="inverted">
+                    <div class="text">
+                        <h1>Chat App</h1>
+                        <p>After experimenting with HTML, CSS, and JavaScript, this project provided the most learning. This is a chat application, similar to WhatsApp. The front-end is built with React.js and uses Socket.io for real-time communication with the server. The back-end is developed with Express.js, and MongoDB is used to store user information. Additionally, JSON Web Tokens (JWT) are implemented for secure authentication.</p>
+                        <button onclick="window.open('', '_blank');">Live Demo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></button>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/work_chatapp_2.png" alt="The main page of the chat app" onclick="focusImage(this, 'focusLeft')" draggable="false">
+                        <img src="./assets/work_chatapp_1.png" alt="The main page of the chat app" class="focusRight" onclick="focusImage(this, 'focusRight')" draggable="false">
+                    </div>
+                    <div class="slideshow">
+                        <img src="./assets/work_chatapp_1.png" alt="The main page of the chat app" draggable="false">
+                        <img src="./assets/work_chatapp_2.png" alt="The main page of the chat app" style="display: none;" draggable="false">
+
+                        <a class="prev" onclick="showSlides(-1, 1)">❮</a>
+                        <a class="next" onclick="showSlides(1, 1)">❯</a>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="text">
+                        <h1>3D Modeling</h1>
+                        <p>In just three months, I completed ten projects, which I consider quite an achievement. I started learning 3D modeling using Blender, motivated by my interest in eventually pursuing video game development. Through these projects, I gained skills in creating 3D models, texturing, and rendering, which provided a solid foundation for future game development endeavors.</p>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/work_3d_model_2.png" alt="An underwater UFO" class="focusLeft" onclick="focusImage(this, 'focusLeft')" draggable="false">
+                        <img src="./assets/work_3d_model_1.png" alt="A Porsche on the street spotlight" onclick="focusImage(this, 'focusRight')" draggable="false">
+                    </div>
+                    <div class="slideshow">
+                        <img src="./assets/work_3d_model_2.png" alt="An underwater UFO" draggable="false">
+                        <img src="./assets/work_3d_model_1.png" alt="A Porsche on the street spotlight" style="display: none;" draggable="false">
+
+                        <a class="prev" onclick="showSlides(-1, 2)">❮</a>
+                        <a class="next" onclick="showSlides(1, 2)">❯</a>
+                    </div>
+                </article>
+
+                <article class="inverted">
+                    <div class="text">
+                        <h1>Video Games</h1>
+                        <p>My first game was an FPS (First-Person Shooter) that took about five months to develop. It features a weapon system (fire and reload), grenades, two maps (both incomplete), and online support (LAN only). Afterward, I became interested in cars and decided to create a car racing game. The goal was to develop an open-world game where players could drive around and relax, but I only managed to get the car mechanics working, which took about two months (its really hard to make car physics in Unreal Engine).</p>
+                        <button onclick="window.open('https:\/\/drive.google.com/file/d/18ypf7gvq5NQOI_LBpDzn2Go7GWFzJ0Ty/view?usp=sharing', '_blank');">Havoc Strike (FPS game) <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg></button>
+                    </div>
+                    <div class="image">
+                        <img src="./assets/work_games_2.png" alt="A screenshot of my car racing game" onclick="focusImage(this, 'focusLeft')" draggable="false">
+                        <img src="./assets/work_games_1.png" alt="A screenshot of my FPS game" class="focusRight" onclick="focusImage(this, 'focusRight')" draggable="false">
+                    </div>
+                    <div class="slideshow">
+                        <img src="./assets/work_games_1.png" alt="A screenshot of my FPS game" draggable="false">
+                        <img src="./assets/work_games_2.png" alt="A screenshot of my car racing game" style="display: none;" draggable="false">
+
+                        <a class="prev" onclick="showSlides(-1, 3)">❮</a>
+                        <a class="next" onclick="showSlides(1, 3)">❯</a>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="text">
+                        <h1>Chrome Extensions</h1>
+                        <p>I developed two Chrome extensions. The first extension enhances YouTube by removing Shorts and adding a dislike button count. The second extension is for Spotify, adding song lyrics to the interface, allowing users to access lyrics without needing a premium subscription.</p>
+                    </div>
+                </article>
+            </section>
+            <hr id="about">
+            <section class="about">
+                <article>
+                    <h1>I guess I'm a software engineer</h1>
+                    <p>
+                        I am an 18-year-old from Portugal, and my passion for development began when I was 14. The 2020 pandemic left me with a lot of free time, so I decided to learn coding by creating a Discord chat bot using JavaScript. This initial project sparked my interest in development.<br>
+                        <br>Following the chat bot, I created several websites, including a chat app and this portfolio. After a while, I felt the need for a new challenge and tried 3D modeling for about three months. It was an enjoyable experience, but I wanted more. So, with some savings, I bought a PC and began exploring video game development. I created an FPS game and a car racing game, but eventually, it got boring. That's when I returned to javascript, developing some chrome extensions to fix some problems, in several websites, bringing my journey to the present.<br>
+                        <br>I'm looking forward to discover more about machine learning and AI, and finally learn some python. You can see most of my projects in <a href="https://github.com/dig0w">github</a>.
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <footer id="contact">
+            <div>
+                <a href="https://github.com/dig0w">Github</a>
+
+                <a href="mailto:rodrigoneto182006@gmail.com">rodrigoneto182006@gmail.com</a>
+
+                <span>© 2024 dig0w</span>
+            </div>
+        </footer>
+    </body>
+</html>
