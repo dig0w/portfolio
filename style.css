@@ -39,11 +39,17 @@ header {
     width: 100%;
 
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
     z-index: 4;
 
     background: linear-gradient(180deg, rgba(30, 31, 34, 1) 0%, rgba(30, 31, 34, 0) 100%);
+}
+header.bottom {
+    top: unset;
+    bottom: 0;
+
+    transform: rotateX(180deg);
 }
 header div {
     display: flex;
@@ -56,6 +62,13 @@ header div {
     max-width: 100rem;
 
     background: transparent;
+
+    transition: transform .15s ease-in-out;
+}
+header div.hidden {
+    transform: translateY(-200%);
+
+    transition: transform .15s ease-in-out;
 }
 header div a {
     padding: .5rem;
@@ -250,7 +263,7 @@ main .work article .image {
     position: relative;
 
     min-width: 61%;
-    min-height: 337.5px;
+    aspect-ratio: 16 / 9;
 }
 main .work article .image img {
     position: absolute;
@@ -324,21 +337,35 @@ main .work article .slideshow {
 
     position: relative;
 
-    min-width: 61%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 main .work article .slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
     width: 100%;
     height: auto;
 
     border-radius: 2rem;
 
     cursor: pointer;
-    transition: z-index .15s ease-in-out;
+    transition: z-index .15s ease-in-out, transform .15s ease-in-out;
+}
+main .work article .slideshow img.hidden {
+    z-index: -1;
+
+    transform: translateX(-50%);
+
+    transition: z-index .15s ease-in-out, transform .15s ease-in-out;
 }
 main .work article .slideshow .prev, main .work article .slideshow .next {
     position: absolute;
     top: 50%;
     left: 0;
+    z-index: 3;
 
     width: auto;
 
@@ -375,6 +402,9 @@ footer {
 
     font-size: 18px;
     font-weight: 300;
+
+    position: relative;
+    z-index: 5;
 }
 footer div {
     display: flex;
@@ -418,11 +448,16 @@ footer div a:hover {
 
     main {
         width: 80%;
+
+        gap: 8rem;
     }
     main .hero {
         flex-direction: column-reverse;
-        gap: 0;
         justify-content: center;
+        gap: 6rem;
+    }
+    main .hero .text {
+        width: 100%;
     }
     main .hero .text h1, main article h1, main article p {
         text-align: center;
@@ -432,13 +467,19 @@ footer div a:hover {
         grid-template-rows: 1fr;
     }
     main .hero .image {
-        width: 35%;
+        width: 70%;
     }
 
+    main .work article {
+        margin: auto auto 10rem auto;
+    }
     main .work article .text {
         align-items: center;
     }
 
+    footer {
+        margin: 8rem 0 0;
+    }
     footer div {
         width: 80%;
     }
@@ -457,6 +498,15 @@ footer div a:hover {
         display: block;
     }
 
+    main {
+        gap: 5rem;
+
+        margin: 9rem auto 0;
+    }
+
+    main .hero {
+        gap: 4rem;
+    }
     main .hero .text h1 {
         font-size: 38px;
     }
@@ -475,6 +525,7 @@ footer div a:hover {
 
     footer {
         padding: 2rem 0 1rem;
+        margin: 5rem 0 0;
     }
     footer div {
         flex-direction: column;
