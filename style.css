@@ -99,6 +99,7 @@ main .hero {
     width: 100%;
 }
 main .hero .text {
+    width: 49%;
     max-width: 38rem;
 }
 main .hero .text h1 {
@@ -131,30 +132,26 @@ main .hero .text div p {
 main .hero .image {
     position: relative;
 
-    width: 136%;
+    width: 41%;
     max-width: 500px;
 
     aspect-ratio: 1/1;
 }
 main .hero .image img {
-    position: absolute;
+    position: relative;
     z-index: 3;
-    top: -3vw;
-    left: -2vw;
 
-    width: 27vw;
-    max-width: 500px;
+    width: 100%;
 
     background: transparent;
 }
 main .hero .image svg {
     position: absolute;
     z-index: 2;
-    top: -8vw;
-    left: -8vw;
+    top: -23%;
+    left: -22%;
 
-    width: 40vw;
-    max-width: 750px;
+    width: 150%;
     height: auto;
 
     background: transparent;
@@ -164,8 +161,8 @@ main .hero .image svg {
 }
 main .hero .image svg:last-child {
     z-index: 1;
-    top: -7vw;
-    left: -7vw;
+    top: -16%;
+    left: -21%;
 
     filter: drop-shadow(10px 10px 0 rgba(255, 255, 255, .75));
 
@@ -219,6 +216,7 @@ main .work article .text {
 }
 main .work article .text button {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 0.5rem;
 
@@ -465,8 +463,8 @@ footer div a:hover {
         justify-items: center;
     }
 
-    main .work article .image {
-        min-width: 100%;
+    main .work article .slideshow {
+        min-width: 135%;
     }
 
     footer {
