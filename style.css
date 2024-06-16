@@ -457,12 +457,18 @@ footer div a:hover {
         display: block;
     }
 
+    main .hero .text h1 {
+        font-size: 38px;
+    }
     main .hero .text div {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
         justify-items: center;
     }
 
+    main article h1 {
+        font-size: 30px;
+    }
     main .work article .slideshow {
         min-width: 135%;
     }
@@ -473,5 +479,12 @@ footer div a:hover {
     footer div {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    main article p, main .hero .text div p {
+        font-size: 18px;
+    }
+    main .work article .text button, footer {
+        font-size: 16px;
     }
 }
