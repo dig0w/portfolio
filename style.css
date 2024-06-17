@@ -15,6 +15,9 @@
 
     transition: color .15s ease-in-out, background .15s ease-in-out;
 }
+a {
+    cursor: pointer;
+}
 
 body {
     display: flex;

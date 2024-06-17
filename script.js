@@ -1,5 +1,19 @@
 function scrollFn(id) {
     document.querySelector(id).scrollIntoView({ behavior: "smooth", block: "start" });
+
+    function scrollEnd() {
+        const navbar = document.querySelector("header div");
+            if(navbar) {
+                console.log("navbar");
+                navbar.classList.remove("hidden");
+
+                window.removeEventListener("scrollend", scrollEnd);
+            };
+    };
+
+    window.addEventListener("scrollend", scrollEnd);
+
+    return;
 };
 
 // Image back to front
@@ -20,6 +34,8 @@ function focusImage(elem, clss) {
             elem.previousElementSibling.classList.remove(rclss);
         };
     }, 500);
+
+    return;
 };
 
 // Images Slide Show
@@ -50,6 +66,8 @@ function showSlides(n, i) {
         };
 
     slides[slideIndex].classList.add("hidden");
+
+    return;
 };
 
 // On Down Scroll Hide Nav Bar
@@ -65,4 +83,6 @@ window.addEventListener("scroll", () => {
         };
 
     lastScrollY = currentScrollY;
+
+    return;
 });
