@@ -388,21 +388,20 @@ main .work article .slideshow .images.second img:last-child {
 main .work article .slideshow .prev, main .work article .slideshow .next {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 5px;
     z-index: 3;
 
     width: auto;
 
-    padding: 16px;
+    padding: 8.5px 16px;
     margin-top: -22px;
 
     color: rgba(255, 255, 255, 1);
     font-weight: bold;
     font-size: 18px;
-    text-shadow: 3px 3px 0 rgba(0, 0, 0, .75);
 
-    border-radius: 0 3px 3px 0;
-    background: transparent;
+    border-radius: 2rem;
+    background: rgba(0, 0, 0, .5);
 
     transition: 0.6s ease;
 
@@ -411,11 +410,12 @@ main .work article .slideshow .prev, main .work article .slideshow .next {
 }
 main .work article .slideshow .next {
     left: unset;
-    right: 0;
-    border-radius: 3px 0 0 3px;
+    right: 5px;
 }
 main .work article .slideshow .prev:hover, main .work article .slideshow .next:hover {
     color: rgba(255, 255, 255, .4);
+
+    background: rgba(0, 0, 0, .3);
 }
 
 footer {
