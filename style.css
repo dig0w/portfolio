@@ -336,31 +336,52 @@ main .work article.inverted .image img.focusRight {
     transform: translate(-23rem, 27rem);
 }
 main .work article .slideshow {
-    display: none;
-
     position: relative;
 
+    min-width: 61%;
     width: 100%;
     aspect-ratio: 16 / 9;
-}
-main .work article .slideshow img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
 
+    border-radius: 2rem;
+    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .75);
+
+    overflow: hidden;
+}
+main .work article .slideshow .images {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+
+    animation: flex-direction 0.5s ease-in-out;
+}
+main .work article .slideshow .images.second {
+    flex-direction: row-reverse;
+
+    animation: flex-direction 0.5s ease-in-out;
+}
+main .work article .slideshow .images img {
     width: 100%;
     height: auto;
 
     border-radius: 2rem;
+    background: transparent;
 
-    cursor: pointer;
     transition: z-index .15s ease-in-out, transform .15s ease-in-out;
 }
-main .work article .slideshow img.hidden {
-    z-index: -1;
+main .work article .slideshow .images img:last-child {
+    transform: translateX(0);
 
-    transform: translateX(-50%);
+    transition: z-index .15s ease-in-out, transform .15s ease-in-out;
+}
+main .work article .slideshow .images.second img {
+    transform: translateX(-100%);
+
+    transition: z-index .15s ease-in-out, transform .15s ease-in-out;
+}
+main .work article .slideshow .images.second img:last-child {
+    transform: translateX(100%);
 
     transition: z-index .15s ease-in-out, transform .15s ease-in-out;
 }
@@ -439,9 +460,6 @@ footer div a:hover {
     }
     main .work article .image {
         display: none;
-    }
-    main .work article .slideshow {
-        display: block;
     }
 }
 @media screen and (max-width: 1023px) {

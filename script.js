@@ -42,30 +42,9 @@ function focusImage(elem, clss) {
 function showSlides(n, i) {
     let slideIndex;
 
-    const slideshow = document.querySelectorAll("div.slideshow")[i];
-    const slides = [];
+    const slideshow = document.querySelectorAll("div.slideshow div.images")[i];
 
-    for (let j = 0; j < slideshow.children.length; j++) {
-        if (slideshow.children[j].tagName == "IMG") {
-            slides.push(slideshow.children[j]);
-        };
-    };
-    for (let k = 0; k < slides.length; k++) {
-        if (slides[k].classList[0] == "hidden") {
-            slideIndex = k;
-        };
-    };
-
-    slides[slideIndex].classList.remove("hidden");
-
-    slideIndex += n;
-        if (slideIndex > slides.length - 1) {
-            slideIndex = 0;
-        } else if (slideIndex < 0) {
-            slideIndex = slides.length - 1;
-        };
-
-    slides[slideIndex].classList.add("hidden");
+    slideshow.classList.toggle("second");
 
     return;
 };
