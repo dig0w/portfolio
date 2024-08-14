@@ -376,9 +376,9 @@ footer div a:hover {
 }
 
 @media screen and (max-width: 1440px) {
-    main .hero .text div {
+    main .hero .text ul {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 
     main .work article, main .work article.inverted {
@@ -409,8 +409,8 @@ footer div a:hover {
     main .hero .text h1, main article h1, main article p {
         text-align: center;
     }
-    main .hero .text div {
-        grid-template-columns: repeat(3, 1fr);
+    main .hero .text ul {
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
     }
     main .hero .image {
@@ -457,9 +457,9 @@ footer div a:hover {
     main .hero .text h1 {
         font-size: 38px;
     }
-    main .hero .text div {
+    main .hero .text ul {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         justify-items: center;
     }
 
@@ -479,7 +479,7 @@ footer div a:hover {
         gap: 2rem;
     }
 
-    main article p, main .hero .text div p {
+    main article p, main .hero .text ul li {
         font-size: 18px;
     }
     main .work article .text button, footer {
