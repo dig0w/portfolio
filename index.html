@@ -15,7 +15,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     </head>
 
     <body>
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="image">
-                    <img src="./assets/dig0w_logo.webp" alt="dig0w logo" draggable="false">
+                    <img src="./assets/dig0w_logo.webp" alt="dig0w logo" draggable="false" loading="lazy">
 
                     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <path d="M38.7,-45.7C46.2,-31.2,45.6,-15.6,49.6,3.9C53.5,23.5,62,47,54.5,63C47,79.1,23.5,87.8,7.9,79.8C-7.6,71.9,-15.3,47.4,-27.9,31.4C-40.6,15.3,-58.2,7.6,-64.3,-6.1C-70.3,-19.8,-64.8,-39.5,-52.2,-54.1C-39.5,-68.6,-19.8,-77.9,-2.1,-75.8C15.6,-73.7,31.2,-60.2,38.7,-45.7Z" transform="translate(100 100)" />
@@ -65,7 +65,7 @@
                     </div>
                     <div class="slideshow">
                         <div class="images">
-                            <img src="./assets/work_chatbot_1.webp" alt="The Discord chat bot" draggable="false">
+                            <img src="./assets/work_chatbot_1_high.webp" alt="The Discord chat bot" draggable="false" loading="lazy">
                         </div>
                     </div>
                 </article>
@@ -78,8 +78,8 @@
                     </div>
                     <div class="slideshow">
                         <div class="images">
-                            <img src="./assets/work_chatapp_1.webp" alt="The main page of the chat app" draggable="false">
-                            <img src="./assets/work_chatapp_2.webp" alt="The main page of the chat app" class="hidden" draggable="false">
+                            <img src="./assets/work_chatapp_1_high.webp" alt="The main page of the chat app" draggable="false" loading="lazy">
+                            <img src="./assets/work_chatapp_2_high.webp" alt="The main page of the chat app" class="hidden" draggable="false" loading="lazy">
                         </div>
 
                         <button class="prev" onclick="showSlides(-1, 1)">❮</button>
@@ -94,8 +94,8 @@
                     </div>
                     <div class="slideshow">
                         <div class="images">
-                            <img src="./assets/work_3d_model_2.webp" alt="An underwater UFO" draggable="false">
-                            <img src="./assets/work_3d_model_1.webp" alt="A Porsche on the street spotlight" class="hidden" draggable="false">
+                            <img src="./assets/work_3d_model_2_high.webp" alt="An underwater UFO" draggable="false" loading="lazy">
+                            <img src="./assets/work_3d_model_1_high.webp" alt="A Porsche on the street spotlight" class="hidden" draggable="false" loading="lazy">
                         </div>
 
                         <button class="prev" onclick="showSlides(-1, 2)">❮</button>
@@ -111,8 +111,8 @@
                     </div>
                     <div class="slideshow">
                         <div class="images">
-                            <img src="./assets/work_games_1.webp" alt="A screenshot of my FPS game" draggable="false">
-                            <img src="./assets/work_games_2.webp" alt="A screenshot of my car racing game" class="hidden" draggable="false">
+                            <img src="./assets/work_games_1_high.webp" alt="A screenshot of my FPS game" draggable="false" loading="lazy">
+                            <img src="./assets/work_games_2_high.webp" alt="A screenshot of my car racing game" class="hidden" draggable="false" loading="lazy">
                         </div>
 
                         <button class="prev" onclick="showSlides(-1, 3)">❮</button>
