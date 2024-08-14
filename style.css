@@ -33,6 +33,7 @@ hr {
     background: rgba(60, 62, 68, 1);
     border: none;
 }
+
 header {
     padding: 2rem 0;
     margin: 0 auto;
@@ -129,7 +130,7 @@ main .hero .text h1 span:first-child {
 main .hero .text h1 span:last-child {
     color: rgba(170, 143, 250, 1);
 }
-main .hero .text div {
+main .hero .text ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -137,7 +138,7 @@ main .hero .text div {
 
     margin: 0 0 0 1rem;
 }
-main .hero .text div p {
+main .hero .text ul li {
     color: rgba(255, 255, 255, .7);
     font-size: 20px;
     font-weight: 300;
@@ -228,7 +229,7 @@ main .work article .text {
     flex-direction: column;
     gap: 2rem;
 }
-main .work article .text .btn {
+/* main .work article .text .btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,80 +259,7 @@ main .work article .text .btn svg {
     background: transparent;
 
     fill: rgba(255, 255, 255, 1);
-}
-main .work article .image {
-    position: relative;
-
-    min-width: 61%;
-    aspect-ratio: 16 / 9;
-}
-main .work article .image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: auto;
-
-    border-radius: 2rem;
-    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, .75);
-
-    cursor: pointer;
-    transition: z-index .15s ease-in-out;
-}
-main .work article .image img:first-child {
-    z-index: 1;
-}
-main .work article .image img:last-child {
-    z-index: 2;
-    top: 4rem;
-    left: 4rem;
-}
-main .work article .image img.focusLeft {
-    top: -19rem;
-    left: -19rem;
-    z-index: 3;
-
-    transform: translate(19rem, 19rem);
-
-    transition: top 0.5s ease, left 0.5s ease, z-index 0s, transform 0.5s ease;
-    transition-delay: 0s, 0s, 0.5s, 0.5s;
-
-    cursor: default;
-}
-main .work article .image img.focusRight {
-    top: -23rem;
-    left: 23rem;
-    z-index: 3;
-
-    transform: translate(-19rem, 27rem);
-
-    transition: top 0.5s ease, left 0.5s ease, z-index 0s, transform 0.5s ease;
-    transition-delay: 0s, 0s, 0.5s, 0.5s;
-
-    cursor: default;
-}
-main .work article.inverted .image img {
-    top: 0;
-    left: -4rem;
-}
-main .work article.inverted .image img:last-child {
-    z-index: 2;
-    top: 4rem;
-    left: 0;
-}
-main .work article.inverted .image img.focusLeft {
-    top: -19rem;
-    left: -23rem;
-
-    transform: translate(19rem, 19rem);
-}
-main .work article.inverted .image img.focusRight {
-    top: -23rem;
-    left: 23rem;
-
-    transform: translate(-23rem, 27rem);
-}
+} */
 main .work article .slideshow {
     position: relative;
 
