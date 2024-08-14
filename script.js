@@ -1,53 +1,45 @@
-function scrollFn(id) {
-    document.querySelector(id).scrollIntoView({ behavior: "smooth", block: "start" });
+var scrolling = false;
 
-    function scrollEnd() {
-        const navbar = document.querySelector("header div");
-            if(navbar) {
-                console.log("navbar");
-                navbar.classList.remove("hidden");
+async function scrollFn(id) {
+    const element = document.querySelector(id);
 
-                window.removeEventListener("scrollend", scrollEnd);
-            };
+    if (element) {
+        scrolling = true;
+
+        await smoothScrollIntoView(element);
+
+        if (id == "#home") {
+            window.location.hash = "";
+        } else {
+            window.location.hash = id.split("#")[1];
+        };
+
+        scrolling = false;
     };
-
-    window.addEventListener("scrollend", scrollEnd);
-
-    if (id == "body") {
-        window.location.hash = "";
-    } else {
-        window.location.hash = id.split("#")[1];
-    };
-
-    return;
 };
 
-// Image back to front
-function focusImage(elem, clss) {
-    elem.classList.add(clss);
+function smoothScrollIntoView(element) {
+    return new Promise((resolve) => {
+        let isScrolling;
 
-    let rclss = "";
-    if (clss == "focusLeft") {
-        rclss = "focusRight";
-    } else {
-        rclss = "focusLeft"
-    };
-
-    setTimeout(() => {
-        if (elem.nextElementSibling) {
-            elem.nextElementSibling.classList.remove(rclss);
-        } else if (elem.previousElementSibling) {
-            elem.previousElementSibling.classList.remove(rclss);
+        function onScrollStop() {
+            clearTimeout(isScrolling);
+            isScrolling = setTimeout(() => {
+                window.removeEventListener("scroll", onScrollStop);
+                resolve();
+            }, 100);
         };
-    }, 500);
 
-    return;
+        window.addEventListener("scroll", onScrollStop);
+
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        onScrollStop();
+    });
 };
 
 // Images Slide Show
 function showSlides(n, i) {
-    let slideIndex;
-
     const slideshow = document.querySelectorAll("div.slideshow div.images")[i];
 
     slideshow.classList.toggle("second");
@@ -61,7 +53,7 @@ window.addEventListener("scroll", () => {
     const navbar = document.querySelector("header div");
 
     const currentScrollY = window.scrollY;
-        if (currentScrollY > lastScrollY) {
+        if (currentScrollY > lastScrollY && !scrolling) {
             navbar.classList.add("hidden");
         } else {
             navbar.classList.remove("hidden");
