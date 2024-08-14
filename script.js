@@ -9,15 +9,15 @@ function scrollFn(id) {
 
                 window.removeEventListener("scrollend", scrollEnd);
             };
-
-        if (id == "body") {
-            window.location.hash = "";
-        } else {
-            window.location.hash = id.split("#")[1];
-        };
     };
 
     window.addEventListener("scrollend", scrollEnd);
+
+    if (id == "body") {
+        window.location.hash = "";
+    } else {
+        window.location.hash = id.split("#")[1];
+    };
 
     return;
 };
